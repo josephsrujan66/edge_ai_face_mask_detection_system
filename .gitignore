@@ -1,0 +1,28 @@
+# Ignore Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+#ESP32 build artifacts
+build/
+sdkconfig.old
+
+# Ignore Dataset Images
+dataset/
+dataset_split/
+*.jpg
+*.jpeg
+*.png
+
+# Ignore Model Weights & Binaries
+*.keras
+*.tflite
+*.h5
+*.so
+*.dylib
+*.dll
+
+# Python standard ignores
+__pycache__/
+*.pyc
