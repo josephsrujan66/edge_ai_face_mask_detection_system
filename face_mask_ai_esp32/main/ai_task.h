@@ -1,7 +1,7 @@
 #ifndef AI_TASK_H
 #define AI_TASK_H
 
-#include <stddef.h>  // Fixes: unknown type name 'size_t'
+#include <stddef.h>
 #include <stdint.h>
 #include <stdbool.h>
 
