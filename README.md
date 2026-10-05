@@ -36,14 +36,14 @@ edge_ai_face_mask_detection_system/
                    Phone / Laptop
                         │
                         │ Camera
-                                    ▼
+                        ▼
                  ┌──────────────┐
                  │ Web Browser  │
                  └──────┬───────┘
                         │
                         │ Wi-Fi / HTTPS
                         │ JPEG
-                                    ▼
+                        ▼
               ┌──────────────────────┐
               │        ESP32         │
               │                      │
@@ -63,7 +63,7 @@ edge_ai_face_mask_detection_system/
               │     Prediction       │
               └──────────┬───────────┘
                          │
-                                     ▼
+                         ▼
                      JSON Result
 ```
 
@@ -667,44 +667,44 @@ Incorrect Mask
 ```text
 Browser Camera
       │
-         ▼
+      ▼
 Capture Frame
       │
-         ▼
+      ▼
 Convert to JPEG
       │
-         ▼
-  POST/predict
+      ▼
+POST /predict
       │
-         ▼
-    ESP32
+      ▼
+ESP32
       │
-         ▼
- JPEG Decoder
+      ▼
+JPEG Decoder
       │
-         ▼
-    RGB888
+      ▼
+RGB888
       │
-         ▼
+      ▼
 64 × 64 × 3
       │
-         ▼
+      ▼
 INT8 Quantization
       │
-         ▼
+      ▼
 TensorFlow Lite Micro
       │
-         ▼
+      ▼
 CNN Inference
       │
-         ▼
+      ▼
 Class + Confidence
       │
-        ▼
-    JSON
+      ▼
+JSON
       │
-        ▼
-   Browser
+      ▼
+Browser
 ```
 
 ---
@@ -716,43 +716,43 @@ The complete development workflow is:
 ```text
 Dataset
    │
-    ▼
+   ▼
 Dataset Preparation
    │
-    ▼
+   ▼
 Train CNN
    │
-    ▼
+   ▼
 Evaluate FP32
    │
-    ▼
+   ▼
 Convert to TFLite
    │
-    ▼
+   ▼
 INT8 Quantization
    │
-    ▼
+   ▼
 Evaluate INT8
    │
-    ▼
+   ▼
 Generate ESP32 Model Files
    │
-    ▼
+   ▼
 Copy/Update ESP32 Firmware
    │
-    ▼
+   ▼
 ESP-IDF Build
    │
-    ▼
+   ▼
 Flash ESP32
    │
-    ▼
+   ▼
 Open Browser
    │
-    ▼
+   ▼
 Camera
    │
-    ▼
+   ▼
 ESP32 Inference
 ```
 
@@ -833,9 +833,9 @@ idf.py flash monitor
 
 Required hardware:
 
- ESP32-WROOM-32 for Edge AI inference
- USB cable for Programming and power
- Phone/Laptop for Camera and browser 
+| ESP32-WROOM-32 for Edge AI inference |
+| USB cable for Programming and power |
+| Phone/Laptop for Camera and browser |
 
 No external camera module is required.
 
@@ -916,7 +916,6 @@ Benefits include:
 
 
 
-
 # 27. Limitations
 
 This project is intended as an embedded AI demonstration and portfolio project.
@@ -933,32 +932,5 @@ Prediction performance can be affected by:
 - Dataset characteristics
 
 It is not intended to be used as a certified safety or medical system.
-
----
-
-# 38. Author
-
-**Joseph Srujan**
-
-Embedded Software / Edge AI
-
-Technologies:
-
-```text
-C
-C++
-Python
-ESP32
-ESP-IDF
-FreeRTOS
-TensorFlow
-TensorFlow Lite
-TensorFlow Lite Micro
-Wi-Fi
-HTTP/HTTPS
-mDNS
-JPEG
-JSON
-```
 
 ---
